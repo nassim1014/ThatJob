@@ -27,6 +27,7 @@ def search_jobs(company_names, keywords, locations, num_results=10):
 @app.route('/api/search', methods=['POST'])
 def handle_search():
     data = request.json
+    print(data)
     company_names = data.get('company_names', [])
     keywords = data.get('keywords', [])
     locations = data.get('locations', [])
